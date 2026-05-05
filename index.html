@@ -8,9 +8,6 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a2d9d5a54a.js" crossorigin="anonymous"></script>
-
   <style>
     * {
       margin: 0;
@@ -83,25 +80,26 @@
       z-index: 999;
     }
 
-    .float-buttons a {
-      width: 55px;
-      height: 55px;
+    .btn {
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      font-size: 22px;
-      text-decoration: none;
       transition: 0.3s;
     }
 
-    .whatsapp { background: #25D366; }
-    .maps { background: #EA4335; }
-    .instagram { background: #E1306C; }
+    .btn img {
+      width: 28px;
+      height: 28px;
+    }
 
-    .float-buttons a:hover {
+    .btn:hover {
       transform: scale(1.2);
+      background: rgba(255,255,255,0.2);
     }
 
     /* SECTION */
@@ -146,12 +144,12 @@
       0%,100% {transform: translateY(0);}
       50% {transform: translateY(-10px);}
     }
-
   </style>
 </head>
 
 <body>
 
+  <!-- HERO -->
   <div class="hero">
     <div class="overlay"></div>
 
@@ -168,19 +166,24 @@
     </div>
   </div>
 
-  <!-- FLOAT BUTTONS -->
+  <!-- FLOATING APP ICONS -->
   <div class="float-buttons">
-    <a href="https://wa.me/917981366211" class="whatsapp" target="_blank">
-      <i class="fab fa-whatsapp"></i>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/917981366211" target="_blank" class="btn">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
     </a>
 
-    <a href="https://maps.app.goo.gl/XkbrmcTRJiC8i32o8" class="maps" target="_blank">
-      <i class="fas fa-map-marker-alt"></i>
+    <!-- Maps -->
+    <a href="https://maps.app.goo.gl/XkbrmcTRJiC8i32o8" target="_blank" class="btn">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Maps">
     </a>
 
-    <a href="https://www.instagram.com/kungfumartialartsacademy02" class="instagram" target="_blank">
-      <i class="fab fa-instagram"></i>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/kungfumartialartsacademy02" target="_blank" class="btn">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
     </a>
+
   </div>
 
   <!-- SERVICES -->
