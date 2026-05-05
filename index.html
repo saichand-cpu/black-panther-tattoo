@@ -8,7 +8,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a2d9d5a54a.js" crossorigin="anonymous"></script>
 
   <style>
@@ -20,12 +20,12 @@
     }
 
     body {
-      overflow-x: hidden;
       background: #000;
       color: #fff;
+      overflow-x: hidden;
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
       height: 100vh;
       background: url('image.jpeg') center/cover no-repeat;
@@ -39,32 +39,28 @@
       position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(2px);
     }
 
     .content {
       position: relative;
       z-index: 2;
-      max-width: 600px;
       animation: fadeUp 1.5s ease;
     }
 
     .content h5 {
       letter-spacing: 3px;
-      font-weight: 300;
       opacity: 0.8;
     }
 
     .content h1 {
-      font-size: 80px;
+      font-size: 70px;
       font-weight: 800;
       line-height: 0.9;
     }
 
-    .content h1 span {
+    .content span {
       display: block;
-      color: #fff;
-      animation: slideIn 1.2s ease;
+      animation: slideIn 1s ease;
     }
 
     /* LOGO */
@@ -73,36 +69,66 @@
       top: 30px;
       right: 40px;
       width: 70px;
-      opacity: 0.9;
       animation: float 3s ease-in-out infinite;
     }
 
-    /* FLOATING BUTTONS */
-    .floating {
-      position: absolute;
-      bottom: 40px;
-      right: 40px;
+    /* FLOAT BUTTONS */
+    .float-buttons {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
       display: flex;
+      flex-direction: column;
       gap: 15px;
+      z-index: 999;
     }
 
-    .btn {
-      width: 50px;
-      height: 50px;
+    .float-buttons a {
+      width: 55px;
+      height: 55px;
       border-radius: 50%;
       display: flex;
-      justify-content: center;
       align-items: center;
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(10px);
-      cursor: pointer;
+      justify-content: center;
+      color: white;
+      font-size: 22px;
+      text-decoration: none;
       transition: 0.3s;
     }
 
-    .btn:hover {
+    .whatsapp { background: #25D366; }
+    .maps { background: #EA4335; }
+    .instagram { background: #E1306C; }
+
+    .float-buttons a:hover {
       transform: scale(1.2);
-      background: #fff;
-      color: #000;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 100px 60px;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 20px;
+      margin-top: 30px;
+      transition: 0.4s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.6;
     }
 
     /* ANIMATIONS */
@@ -119,25 +145,6 @@
     @keyframes float {
       0%,100% {transform: translateY(0);}
       50% {transform: translateY(-10px);}
-    }
-
-    /* SCROLL SECTION */
-    .section {
-      padding: 100px 60px;
-      text-align: center;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 20px;
-      margin-top: 30px;
-      transition: 0.4s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      background: rgba(255,255,255,0.1);
     }
 
   </style>
@@ -159,16 +166,24 @@
         <span>PANTHER</span>
       </h1>
     </div>
-
-    <!-- FLOATING BUTTONS -->
-    <div class="floating">
-      <div class="btn" onclick="openInsta()"><i class="fab fa-instagram"></i></div>
-      <div class="btn" onclick="openWhatsApp()"><i class="fab fa-whatsapp"></i></div>
-      <div class="btn" onclick="openMap()"><i class="fas fa-map-marker-alt"></i></div>
-    </div>
   </div>
 
-  <!-- SECOND SECTION -->
+  <!-- FLOAT BUTTONS -->
+  <div class="float-buttons">
+    <a href="https://wa.me/917981366211" class="whatsapp" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://maps.app.goo.gl/XkbrmcTRJiC8i32o8" class="maps" target="_blank">
+      <i class="fas fa-map-marker-alt"></i>
+    </a>
+
+    <a href="https://www.instagram.com/kungfumartialartsacademy02" class="instagram" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <!-- SERVICES -->
   <div class="section">
     <h2>Our Services</h2>
 
@@ -177,41 +192,13 @@
     <div class="card">Premium Studio Experience</div>
   </div>
 
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Black Panther Tattooz
+  </footer>
+
+  <!-- SCRIPT -->
   <script>
-    // BUTTON LINKS
-    <div class="float-buttons">
-<a href="https://wa.me/917981366211" class="whatsapp" target="_blank">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="https://maps.app.goo.gl/XkbrmcTRJiC8i32o8" class="maps" target="_blank">
-<i class="fas fa-map-marker-alt"></i>
-</a>
-
-<a href="https://www.instagram.com/kungfumartialartsacademy02?igsh=YXc0bm92ODlnMWpw" class="instagram" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
-</div>
-<footer>
-© 2026 black panther tattoz
-</footer>
-
-<script>
-function sendWhatsApp(){
-    let name = document.getElementById("name").value;
-    let phone = document.getElementById("phone").value;
-    let msg = document.getElementById("message").value;
-
-    let url = "https://wa.me/917981366211?text="
-    + "New Admission Request:%0A"
-    + "Name: " + name + "%0A"
-    + "Phone: " + phone + "%0A"
-    + "Message: " + msg;
-
-    window.open(url, '_blank');
-
-
-    // SCROLL ANIMATION
     window.addEventListener("scroll", () => {
       document.querySelectorAll(".card").forEach((el) => {
         let pos = el.getBoundingClientRect().top;
